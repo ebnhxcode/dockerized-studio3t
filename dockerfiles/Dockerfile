@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-MAINTAINER Esteban Ramos <eramos@digital.gob.cl>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
