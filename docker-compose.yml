@@ -1,0 +1,25 @@
+version: '3.6'
+
+# Services
+services:
+  studio3tvnc:
+    container_name: studio3tvnc
+    volumes:
+      - ./volume:/volume
+      - /:/parent
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile
+    restart: always  
+    networks:
+      - studio3tvnc_network
+    tty: true
+    ports:
+      - "5901:5900"
+
+
+
+# Networks
+networks:
+    studio3tvnc_network:
+        driver: bridge
