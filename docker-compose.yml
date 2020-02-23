@@ -10,7 +10,7 @@ services:
     build:
       context: .
       dockerfile: dockerfiles/Dockerfile
-    restart: always  
+    #restart: always  
     networks:
       - studio3tvnc_network
     tty: true
